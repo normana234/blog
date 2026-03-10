@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog | Insights & Thoughts</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Lora:italic,wght@0,400;0,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0984e3;
+            --text-main: #2d3436;
+            --text-muted: #636e72;
+            --bg-body: #f4f7f6;
+            --bg-card: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Blog Header */
+        .blog-header {
+            text-align: center;
+            padding: 80px 20px;
+            background: #fff;
+            margin-bottom: 40px;
+        }
+
+        .blog-header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        /* Main Content Layout */
+        .main-layout {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        /* Blog Post Card */
+        .post-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+            transition: transform 0.3s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-image {
+            width: 100%;
+            height: 250px;
+            background: #dfe6e9;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 30px;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .post-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+            text-decoration: none;
+            display: block;
+            line-height: 1.3;
+        }
+
+        .post-excerpt {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Sidebar */
+        .sidebar-section {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        .category-list {
+            list-style: none;
+        }
+
+        .category-list li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .category-list a {
+            text-decoration: none;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .category-list a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .blog-header h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">TECH.LOG</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Articles</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="blog-header">
+        <h1>Latest Articles</h1>
+        <p style="color: #636e72;">Thoughts on software engineering, design, and productivity.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-layout">
+        
+        <!-- Blog Posts List -->
+        <div class="blog-posts">
+            
+            <!-- Post 1 -->
+            <article class="post-card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Post Image" class="post-image">
+                <div class="post-content">
+                    <div class="post-meta">October 24, 2023 • Engineering</div>
+                    <a href="#" class="post-title">Mastering Clean Code in Modern JavaScript</a>
+                    <p class="post-excerpt">
+                        Writing code is easy, but writing code that your future self and teammates can understand is an art form. Today we dive into functional patterns and clean naming conventions...
+                    </p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </article>
+
+            <!-- Post 2 -->
+            <article class="post-card">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Post Image" class="post-image">
+                <div class="post-content">
+                    <div class="post-meta">October 15, 2023 • Productivity</div>
+                    <a href="#" class="post-title">Why I Switched to Neovim in 2023</a>
+                    <p class="post-excerpt">
+                        The journey from VS Code to a terminal-based workflow wasn't easy, but the productivity gains have been immense. Here is my setup and the plugins I can't live without...
+                    </p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </article>
+
+            <!-- Post 3 -->
+            <article class="post-card">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" alt="Post Image" class="post-image">
+                <div class="post-content">
+                    <div class="post-meta">September 28, 2023 • UI/UX</div>
+                    <a href="#" class="post-title">The Psychology of Dark Mode Design</a>
+                    <p class="post-excerpt">
+                        It's more than just flipping colors. Designing for dark mode requires understanding contrast ratios, eye strain, and emotional response to different hues...
+                    </p>
+                    <a href="#" class="read-more">Read Article →</a>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">About Me</h3>
+                <p style="font-size: 0.9rem; color: #636e72;">
+                    I'm Alex, a full-stack developer sharing everything I learn about building great software. 
+                </p>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Categories</h3>
+                <ul class="category-list">
+                    <li><a href="#">Engineering <span>(12)</span></a></li>
+                    <li><a href="#">Productivity <span>(5)</span></a></li>
+                    <li><a href="#">UI/UX Design <span>(8)</span></a></li>
+                    <li><a href="#">Career <span>(3)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Newsletter</h3>
+                <p style="font-size: 0.9rem; color: #636e72; margin-bottom: 15px;">Get the latest posts sent to your inbox.</p>
+                <input type="email" placeholder="Your email" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+                <button style="width: 100%; padding: 10px; background: var(--primary-color); color: #fff; border: none; border-radius: 5px; cursor: pointer; font-weight: 600;">Subscribe</button>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023 TechLog. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
